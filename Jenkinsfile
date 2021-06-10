@@ -29,9 +29,8 @@ pipeline{
           }
            stage('UnitTest'){
 		   agent any
-              steps{
-		  git 'https://github.com/Sonal0409/DevOpsClassCodes.git'    
-                  bat 'mvn test'
+              steps{   
+                  sh 'mvn test'
               }
                post {
                success {
